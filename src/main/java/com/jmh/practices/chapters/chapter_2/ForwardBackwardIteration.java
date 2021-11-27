@@ -13,8 +13,7 @@ import java.util.concurrent.TimeUnit;
 @OutputTimeUnit(TimeUnit.MICROSECONDS)
 public class ForwardBackwardIteration {
   @Param({"16348", "65536", "524288"})
-  private
-  int length;
+  private int length;
 
   private int[] values;
   private int[] factors;
@@ -67,7 +66,7 @@ public class ForwardBackwardIteration {
   public static void main(String... args) throws RunnerException {
 
     Options opts = new OptionsBuilder()
-        .include("ForwardBackwardIteration")
+        .include(ForwardBackwardIteration.class.getSimpleName())
         .warmupIterations(1)
         .measurementIterations(1)
         .jvmArgs("-Xms2g", "-Xmx2g")
